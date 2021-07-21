@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+            
+                <ng-container *ngFor="let item of productList">
+                   <a routerLink="products/{{item.id}}">
+                <div class="card col-md-3" id="items" >
+                    <img src="{{item.image}}" alt="">
+                    <h4 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h4>
+                    <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                    <p><strong>price:</strong>${{item.price}}</p>
+                    <button  class="btn btn-primary">Add to cart</button>
+                </div></a>
+            </ng-container>
+
+            
+        
+    </div>
+</div>
